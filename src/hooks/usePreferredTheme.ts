@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { isBrowser } from "src/utils/helpers";
+import { isBrowser } from "src/helpers/helpers";
 
 const THEME_STORAGE_VAR = "preferred-theme";
 
