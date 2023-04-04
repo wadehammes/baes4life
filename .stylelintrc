@@ -1,0 +1,11 @@
+{
+  "customSyntax": "postcss-styled-syntax",
+  "extends": [
+    "stylelint-config-recommended",
+    "stylelint-config-styled-components"
+  ],
+  "rules": {
+    "value-no-vendor-prefix": null,
+    "property-no-vendor-prefix": null
+  }
+}
