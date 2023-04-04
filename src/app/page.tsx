@@ -1,10 +1,10 @@
 "use client";
 
-import { FC, ReactElement } from "react";
+import { FC } from "react";
 import { PageContainer } from "src/components/PageContainer/Page.component";
 
-const Home: FC = (): ReactElement => {
-  return <PageContainer>Hello world</PageContainer>;
+const Home: FC = () => {
+  return <PageContainer>Baes 4 Life</PageContainer>;
 };
 
 export default Home;
