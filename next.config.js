@@ -8,9 +8,7 @@ module.exports = {
     styledComponents: true,
     reactRemoveProperties: false,
   },
-  experimental: {
-    appDir: true,
-  },
+  appDir: true,
   env: {
     ENVIRONMENT: process.env.ENVIRONMENT,
   },
