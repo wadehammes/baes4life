@@ -18,19 +18,19 @@ jobs:
       - name: Setup PNPM
         uses: pnpm/action-setup@v2.2.4
         with:
-          version: 8.1.1
+          version: 8.6.2
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18.15.0
+          node-version: 18.16.0
           cache: "pnpm"
       - name: Install dependencies
         run: pnpm install
       - name: Run TSC
-        run: sudo yarn tsc:ci
+        run: pnpm tsc:ci
       - name: Run ESLint
-        run: sudo yarn lint:ci
+        run: pnpm lint:ci
       - name: Run Stylelint
-        run: sudo yarn lint:css
+        run: pnpm lint:css
       - name: Run Jest
-        run: sudo yarn test:ci
+        run: pnpm test:ci
