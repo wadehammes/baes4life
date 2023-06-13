@@ -1,4 +1,4 @@
-"use server";
+"use client";
 
 import { PropsWithChildrenOnly } from "src/@types/react";
 import { Content, Grid } from "src/components/Layout";
