@@ -9,7 +9,7 @@ module.exports = {
     reactRemoveProperties: false,
   },
   experimental: {
-    appDir: true,
+    serverActions: true,
   },
   env: {
     ENVIRONMENT: process.env.ENVIRONMENT,
