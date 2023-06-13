@@ -8,6 +8,9 @@ module.exports = {
     styledComponents: true,
     reactRemoveProperties: false,
   },
+  experimental: {
+    serverActions: true,
+  },
   env: {
     ENVIRONMENT: process.env.ENVIRONMENT,
   },
