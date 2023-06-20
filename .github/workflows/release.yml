@@ -17,7 +17,6 @@ jobs:
         id: reset_main
         run: |
           echo ${{ github.ref }}
-          /usr/bin/git pull origin main
           /usr/bin/git push origin ${{ github.ref }}:main --force
       - name: Generate changelog
         id: changelog
