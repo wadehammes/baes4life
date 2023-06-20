@@ -16,8 +16,9 @@ jobs:
       - name: Reset Main
         id: reset_main
         run: |
-          echo ${{ github.ref }} 
-          /usr/bin/git push origin ${{ github.ref }}:main
+          echo ${{ github.ref }}
+          /usr/bin/git pull
+          /usr/bin/git push origin ${{ github.ref }}:main --force
       - name: Generate changelog
         id: changelog
         uses: metcalfc/changelog-generator@v4.1.0
