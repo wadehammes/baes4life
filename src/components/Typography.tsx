@@ -1,28 +1,78 @@
 import { FontWeight } from "src/interfaces/common.interfaces";
 import { device } from "src/styles/theme";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const H1 = styled.h1`
-  font-size: 2rem;
-  font-family: "Suez One", serif;
-  font-weight: ${FontWeight.Bold};
-  padding-bottom: 1.5rem;
-  line-height: 1.1;
+interface AnimatedTextProps {
+  $inView?: boolean;
+  $delay?: number;
+}
+
+export const H1 = styled.h1<AnimatedTextProps>`
+  font-size: 3rem;
+  font-weight: ${FontWeight.Semibold};
+  line-height: 1;
 
   @media ${device.tablet} {
-    font-size: 4rem;
+    font-size: 6rem;
   }
 `;
 
-export const P = styled.p`
+export const H2 = styled.h2<AnimatedTextProps>`
+  font-size: 1.5rem;
   font-weight: ${FontWeight.Regular};
+  line-height: 1.2;
+  padding-bottom: 1.5rem;
+  transform: translateY(1rem);
+  transition:
+    transform 0.75s ease-in-out ${({ $delay }) => `${$delay || 0}ms`},
+    opacity 0.5s ease-in-out ${({ $delay }) => `${$delay || 0}ms`};
+  opacity: 0;
+
+  @media ${device.tablet} {
+    font-size: 3rem;
+  }
+
+  ${({ $inView }) =>
+    $inView &&
+    css`
+      transform: translateY(0);
+      opacity: 1;
+    `}
+`;
+
+export const HeroSubText = styled.p<AnimatedTextProps>`
+  font-weight: ${FontWeight.Regular};
+  line-height: 1.5;
+  font-size: 1rem;
+
+  @media ${device.tablet} {
+    font-size: 1.5rem;
+  }
+`;
+
+export const P = styled.p<AnimatedTextProps>`
+  font-weight: ${FontWeight.Regular};
+  font-family: "Source Sans 3", sans-serif;
   line-height: 1.5;
   padding-bottom: 1.5rem;
   font-size: 1rem;
+  transform: translateY(1rem);
+  transition:
+    transform 0.75s ease-in-out ${({ $delay }) => `${$delay || 0}ms`},
+    opacity 0.5s ease-in-out ${({ $delay }) => `${$delay || 0}ms`};
+  opacity: 0;
+  letter-spacing: 0.05em;
 
   @media ${device.tablet} {
     font-size: 1.15rem;
   }
+
+  ${({ $inView }) =>
+    $inView &&
+    css`
+      transform: translateY(0);
+      opacity: 1;
+    `}
 
   &:empty {
     display: none;

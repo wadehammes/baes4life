@@ -14,8 +14,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>Baes4Life - Jen and Wade's Wedding Site</title>
+        <title>Jen and Wade's Wedding Site</title>
         <link rel="icon" href="favicon.webp" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;700&family=Source+Sans+3:wght@300&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body>
         <StyledComponentsRegistry>

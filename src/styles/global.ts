@@ -32,7 +32,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background: var(--color-bg);
     color: var(--color-text);
-    font-family: 'Space Mono', monospace;
+    font-family: 'Belanosima', sans-serif;
     font-size: 14px;
     transition: background 0.2s ease-in-out;
 

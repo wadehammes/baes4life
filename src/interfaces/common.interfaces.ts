@@ -6,6 +6,7 @@ export enum Environments {
 
 export enum FontWeight {
   Regular = 400,
+  Semibold = 600,
   Bold = 700,
 }
 
