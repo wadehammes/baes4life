@@ -1,16 +1,14 @@
 import Image from "next/image";
 import { H1, HeroSubText } from "src/components/Typography";
+import { useCountdown } from "src/hooks/useCountdown";
 import { keyframes, styled } from "styled-components";
 
-const bounce = keyframes`
-  0% {
-    transform: translateY(-20px);
+const rotate = keyframes`
+  from {
+    transform: rotate(0);
   }
-  50% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-20px);
+  to {
+    transform: rotate(360deg);
   }
 `;
 
@@ -35,11 +33,32 @@ const StyledHero = styled.div`
   }
 `;
 
-const StyledMonstera = styled(Image)`
-  animation: ${bounce} 2s ease-in-out 1s infinite;
+const StyledPageArrow = styled.div`
+  position: absolute;
+  z-index: 2;
+  bottom: 6rem;
+  cursor: pointer;
+`;
+
+const StyledCountdown = styled.time`
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  font-family: "Source Sans 3", sans-serif;
+  font-variant-numeric: tabular-nums;
+  text-transform: uppercase;
+  position: relative;
+
+  svg {
+    position: absolute;
+    top: -28px;
+    animation: ${rotate} 15s linear infinite;
+  }
 `;
 
 export const Hero = () => {
+  const weddingCountdown = useCountdown();
+
   const handleOurStoryScroll = () => {
     document
       .querySelector("#our-story")
@@ -67,20 +86,30 @@ export const Hero = () => {
         <H1>Jen & Wade</H1>
         <HeroSubText>Jupiter, FL &bull; April 21, 2024</HeroSubText>
       </StyledHeader>
-      <StyledMonstera
-        src="/icons/monstera.svg"
-        height="48"
-        width="48"
-        alt=""
-        role="presentation"
-        style={{
-          position: "absolute",
-          zIndex: 2,
-          bottom: "2rem",
-          cursor: "pointer",
-        }}
-        onClick={handleOurStoryScroll}
-      />
+      <StyledPageArrow onClick={handleOurStoryScroll}>
+        <StyledCountdown>
+          <svg viewBox="0 0 100 100" width="100" height="100">
+            <defs>
+              <path
+                id="circle"
+                d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
+              />
+            </defs>
+            <text font-size="10" fill="white">
+              <textPath xlinkHref="#circle">
+                WEDDING {weddingCountdown}
+              </textPath>
+            </text>
+          </svg>
+          <Image
+            src="/icons/monstera.svg"
+            height="48"
+            width="48"
+            alt=""
+            role="presentation"
+          />
+        </StyledCountdown>
+      </StyledPageArrow>
     </StyledHero>
   );
 };
