@@ -18,7 +18,7 @@ const StyledHeader = styled.header`
 `;
 
 const StyledHero = styled.div`
-  background-color: var(--colors-black);
+  background-color: var(--colors-trueBlack);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,13 +78,13 @@ export const Hero = () => {
           position: "absolute",
           zIndex: 0,
           top: 0,
-          opacity: 0.35,
+          opacity: 0.45,
           height: "100%",
         }}
       />
       <StyledHeader>
         <H1>Jen & Wade</H1>
-        <HeroSubText>Jupiter, FL &bull; April 21, 2024</HeroSubText>
+        <HeroSubText>Jupiter, FL &bull; April 21st, 2024</HeroSubText>
       </StyledHeader>
       <StyledPageArrow onClick={handleOurStoryScroll}>
         <StyledCountdown>
@@ -95,9 +95,9 @@ export const Hero = () => {
                 d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
               />
             </defs>
-            <text font-size="10" fill="white">
+            <text fontSize="10" fill="white">
               <textPath xlinkHref="#circle">
-                WEDDING {weddingCountdown}
+                SAY I DO {weddingCountdown}
               </textPath>
             </text>
           </svg>
