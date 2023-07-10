@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { H1, P } from "src/components/Typography";
+import { H1, HeroSubText } from "src/components/Typography";
 import { keyframes, styled } from "styled-components";
 
 const bounce = keyframes`
@@ -20,6 +20,7 @@ const StyledHeader = styled.header`
 `;
 
 const StyledHero = styled.div`
+  background-color: var(--colors-black);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,7 +65,7 @@ export const Hero = () => {
       />
       <StyledHeader>
         <H1>Jen & Wade</H1>
-        <P>Jupiter, FL &bull; April 21, 2024</P>
+        <HeroSubText>Jupiter, FL &bull; April 21, 2024</HeroSubText>
       </StyledHeader>
       <StyledMonstera
         src="/icons/monstera.svg"
@@ -76,6 +77,7 @@ export const Hero = () => {
           position: "absolute",
           zIndex: 2,
           bottom: "2rem",
+          cursor: "pointer",
         }}
         onClick={handleOurStoryScroll}
       />

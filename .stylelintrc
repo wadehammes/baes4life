@@ -6,6 +6,7 @@
   ],
   "rules": {
     "value-no-vendor-prefix": null,
-    "property-no-vendor-prefix": null
+    "property-no-vendor-prefix": null,
+    "media-query-no-invalid": null
   }
 }

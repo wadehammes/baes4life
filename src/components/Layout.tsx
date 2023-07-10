@@ -11,8 +11,16 @@ export const Content = styled(Container)`
   height: 100%;
 `;
 
-export const ContentContainer = styled.div`
+export const Section = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  gap: 2rem;
   padding: 4rem;
-  max-width: 60ch;
+`;
+
+export const ContentContainer = styled.div`
+  max-width: 70ch;
   margin: 0 auto;
+  width: 100%;
 `;

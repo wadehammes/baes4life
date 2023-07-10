@@ -4,6 +4,7 @@ import styled, { css } from "styled-components";
 
 interface AnimatedTextProps {
   $inView?: boolean;
+  $delay?: number;
 }
 
 export const H1 = styled.h1<AnimatedTextProps>`
@@ -20,11 +21,11 @@ export const H2 = styled.h2<AnimatedTextProps>`
   font-size: 1.5rem;
   font-weight: ${FontWeight.Regular};
   line-height: 1.2;
+  padding-bottom: 1.5rem;
   transform: translateY(1rem);
   transition:
-    transform 0.75s ease-in-out,
-    opacity 0.5s ease-in-out;
-  transition-delay: 100ms;
+    transform 0.75s ease-in-out ${({ $delay }) => `${$delay || 0}ms`},
+    opacity 0.5s ease-in-out ${({ $delay }) => `${$delay || 0}ms`};
   opacity: 0;
 
   @media ${device.tablet} {
@@ -39,15 +40,39 @@ export const H2 = styled.h2<AnimatedTextProps>`
     `}
 `;
 
-export const P = styled.p<AnimatedTextProps>`
+export const HeroSubText = styled.p<AnimatedTextProps>`
   font-weight: ${FontWeight.Regular};
   line-height: 1.5;
-  padding-bottom: 1.5rem;
   font-size: 1rem;
 
   @media ${device.tablet} {
     font-size: 1.5rem;
   }
+`;
+
+export const P = styled.p<AnimatedTextProps>`
+  font-weight: ${FontWeight.Regular};
+  font-family: "Source Sans 3", sans-serif;
+  line-height: 1.5;
+  padding-bottom: 1.5rem;
+  font-size: 1rem;
+  transform: translateY(1rem);
+  transition:
+    transform 0.75s ease-in-out ${({ $delay }) => `${$delay || 0}ms`},
+    opacity 0.5s ease-in-out ${({ $delay }) => `${$delay || 0}ms`};
+  opacity: 0;
+  letter-spacing: 0.05em;
+
+  @media ${device.tablet} {
+    font-size: 1.15rem;
+  }
+
+  ${({ $inView }) =>
+    $inView &&
+    css`
+      transform: translateY(0);
+      opacity: 1;
+    `}
 
   &:empty {
     display: none;

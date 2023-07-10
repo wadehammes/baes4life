@@ -17,9 +17,13 @@ export default function RootLayout({
         <title>Jen and Wade's Wedding Site</title>
         <link rel="icon" href="favicon.webp" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600&display=swap"
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;700&family=Source+Sans+3:wght@300&display=swap"
           rel="stylesheet"
         />
       </head>
