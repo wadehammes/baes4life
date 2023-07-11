@@ -14,6 +14,10 @@ const rotate = keyframes`
 `;
 
 const StyledHeader = styled.header`
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  gap: 1rem;
   position: relative;
   z-index: 1;
 `;
@@ -49,11 +53,16 @@ const StyledCountdown = styled.time`
   font-variant-numeric: tabular-nums;
   text-transform: uppercase;
   position: relative;
+  transition: transform 0.1s linear;
 
   svg {
     position: absolute;
     top: -28px;
     animation: ${rotate} 15s linear infinite;
+  }
+
+  &:active {
+    transform: scale(0.95);
   }
 `;
 
@@ -68,25 +77,31 @@ export const Hero = () => {
   };
 
   return (
-    <StyledHero style={{ height: `${height}px`, width: `${width}px` }}>
+    <StyledHero
+      style={{
+        height: `${height}px`,
+        width: `${width}px`,
+      }}
+    >
       <Image
         src="/images/hero.jpg"
-        height="1707"
+        height={height}
         width="2560"
         alt=""
         role="presentation"
+        priority
+        quality={100}
         style={{
           objectFit: "cover",
           position: "absolute",
           zIndex: 0,
           top: 0,
           opacity: 0.45,
-          height: "100%",
         }}
       />
       <StyledHeader>
         <H1>Jen & Wade</H1>
-        <HeroSubText>Jupiter, FL &bull; April 21st, 2024</HeroSubText>
+        <HeroSubText>April 21st, 2024 &mdash; Jupiter, FL</HeroSubText>
       </StyledHeader>
       <StyledPageArrow onClick={handleOurStoryScroll}>
         <StyledCountdown>
