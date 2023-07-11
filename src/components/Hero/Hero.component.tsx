@@ -24,7 +24,7 @@ const StyledHero = styled.div`
   align-items: center;
   justify-content: center;
   min-width: 100%;
-  min-height: 320px;
+  min-height: 100vh;
   text-align: center;
   overflow: hidden;
   color: var(--color-text);
