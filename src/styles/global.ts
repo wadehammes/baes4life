@@ -33,12 +33,8 @@ export const GlobalStyles = createGlobalStyle`
     background: var(--color-bg);
     color: var(--color-text);
     font-family: 'Belanosima', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     transition: background 0.2s ease-in-out;
-
-    @media ${device.tablet} {
-      font-size: 16px;
-    }
   }
   body {
     line-height: 1;

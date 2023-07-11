@@ -16,7 +16,7 @@ export const Section = styled.div`
   flex-flow: column nowrap;
   justify-content: center;
   gap: 2rem;
-  padding: 4rem;
+  padding: 4rem 2rem;
 `;
 
 export const ContentContainer = styled.div`

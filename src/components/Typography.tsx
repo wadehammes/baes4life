@@ -8,7 +8,7 @@ interface AnimatedTextProps {
 }
 
 export const H1 = styled.h1<AnimatedTextProps>`
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: ${FontWeight.Semibold};
   line-height: 1;
 
@@ -18,7 +18,7 @@ export const H1 = styled.h1<AnimatedTextProps>`
 `;
 
 export const H2 = styled.h2<AnimatedTextProps>`
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: ${FontWeight.Regular};
   line-height: 1.2;
   padding-bottom: 1.5rem;
@@ -43,7 +43,7 @@ export const H2 = styled.h2<AnimatedTextProps>`
 export const HeroSubText = styled.p<AnimatedTextProps>`
   font-weight: ${FontWeight.Regular};
   line-height: 1.5;
-  font-size: 1rem;
+  font-size: 1.25rem;
 
   @media ${device.tablet} {
     font-size: 1.5rem;
@@ -55,17 +55,13 @@ export const P = styled.p<AnimatedTextProps>`
   font-family: "Source Sans 3", sans-serif;
   line-height: 1.5;
   padding-bottom: 1.5rem;
-  font-size: 1rem;
+  font-size: 1.15rem;
   transform: translateY(1rem);
   transition:
     transform 0.75s ease-in-out ${({ $delay }) => `${$delay || 0}ms`},
     opacity 0.5s ease-in-out ${({ $delay }) => `${$delay || 0}ms`};
   opacity: 0;
   letter-spacing: 0.05em;
-
-  @media ${device.tablet} {
-    font-size: 1.15rem;
-  }
 
   ${({ $inView }) =>
     $inView &&
