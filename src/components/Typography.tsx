@@ -44,6 +44,7 @@ export const HeroSubText = styled.p<AnimatedTextProps>`
   font-weight: ${FontWeight.Regular};
   line-height: 1.5;
   font-size: 1.25rem;
+  letter-spacing: 0.15rem;
 
   @media ${device.tablet} {
     font-size: 1.5rem;
