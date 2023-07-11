@@ -2,6 +2,7 @@ import Image from "next/image";
 import { H1, HeroSubText } from "src/components/Typography";
 import { useCountdown } from "src/hooks/useCountdown";
 import { keyframes, styled } from "styled-components";
+import { useWindowSize } from "usehooks-ts";
 
 const rotate = keyframes`
   from {
@@ -22,7 +23,7 @@ const StyledHero = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  min-width: 100%;
   min-height: 100vh;
   text-align: center;
   overflow: hidden;
@@ -57,6 +58,7 @@ const StyledCountdown = styled.time`
 `;
 
 export const Hero = () => {
+  const { width, height } = useWindowSize();
   const weddingCountdown = useCountdown();
 
   const handleOurStoryScroll = () => {
@@ -66,7 +68,7 @@ export const Hero = () => {
   };
 
   return (
-    <StyledHero>
+    <StyledHero style={{ height: `${height}px`, width: `${width}px` }}>
       <Image
         src="/images/hero.jpg"
         height="1707"
