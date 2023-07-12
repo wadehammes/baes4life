@@ -1,4 +1,3 @@
-import { useInView } from "react-intersection-observer";
 import { Accordion } from "src/components/Accordion/Accordion.component";
 import { details } from "src/components/Details/Details";
 import { Section } from "src/components/Layout";
