@@ -31,30 +31,22 @@ const DetailsColumns = styled.div`
   }
 `;
 
-export const Details = () => {
-  const { ref, inView } = useInView({
-    threshold: 0.25,
-  });
-
-  return (
-    <DetailsContainer ref={ref}>
-      <DetailsColumns>
-        <H2 $inView={inView} style={{ padding: 0 }}>
-          Details
-        </H2>
-      </DetailsColumns>
-      <DetailsColumns>
-        {details.map((detail) => (
-          <Accordion
-            key={detail.id}
-            $parentItem={parse(detail.parentItem)}
-            $accordionId={detail.id}
-            $accordionLabel={detail.label}
-          >
-            {detail.children.map((child) => parse(child))}
-          </Accordion>
-        ))}
-      </DetailsColumns>
-    </DetailsContainer>
-  );
-};
+export const Details = () => (
+  <DetailsContainer>
+    <DetailsColumns>
+      <H2 style={{ padding: 0 }}>Details</H2>
+    </DetailsColumns>
+    <DetailsColumns>
+      {details.map((detail) => (
+        <Accordion
+          key={detail.id}
+          $parentItem={parse(detail.parentItem)}
+          $accordionId={detail.id}
+          $accordionLabel={detail.label}
+        >
+          {detail.children.map((child) => parse(child))}
+        </Accordion>
+      ))}
+    </DetailsColumns>
+  </DetailsContainer>
+);
