@@ -23,8 +23,6 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     border: 0;
-    font: inherit;
-    font-size: 100%;
     vertical-align: baseline;
   }
   html,
@@ -32,6 +30,7 @@ export const GlobalStyles = createGlobalStyle`
     background: var(--color-bg);
     color: var(--color-text);
     font-family: "Source Sans 3", sans-serif;
+    font-weight: ${FontWeight.Regular};
     font-size: 16px;
     transition: background 0.2s ease-in-out;
   }

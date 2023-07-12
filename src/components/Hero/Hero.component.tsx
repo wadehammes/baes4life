@@ -106,7 +106,7 @@ export const Hero = () => {
       />
       <StyledHeader>
         <H1>Jen & Wade</H1>
-        <HeroSubText>April 21st, 2024 &mdash; Jupiter, FL</HeroSubText>
+        <HeroSubText>April 20th-22nd, 2024 &mdash; Jupiter, FL</HeroSubText>
       </StyledHeader>
       <StyledPageArrow onClick={handleOurStoryScroll}>
         <StyledCountdown>

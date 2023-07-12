@@ -24,4 +24,16 @@ export const details: Detail[] = [
     parentItem: "<span>Attire</span>",
     children: ["<p>This is what people should wear</p>"],
   },
+  {
+    id: "detail-accommodations",
+    label: "What are the travel and accommodations for the wedding?",
+    parentItem: "<span>Accommodations / travel</span>",
+    children: ["<p>This is how we travel</p>"],
+  },
+  {
+    id: "detail-schedule",
+    label: "What is the schedule of events for the wedding?",
+    parentItem: "<span>Schedule of events</span>",
+    children: ["<p>This is how we travel</p>"],
+  },
 ];

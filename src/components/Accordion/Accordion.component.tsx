@@ -28,7 +28,7 @@ const AccordionWrapper = styled.div<AccordionBodyProps>`
 const AccordionBody = styled.div<AccordionBodyProps>`
   color: currentColor;
   display: none;
-  padding: 0 0 1rem 0;
+  padding: 0 0 2rem 0;
   font-family: inherit;
   font-size: 1.25rem;
 
