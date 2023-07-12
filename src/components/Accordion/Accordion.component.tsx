@@ -9,7 +9,7 @@ interface AccordionBodyProps {
 
 const AccordionWrapper = styled.div<AccordionBodyProps>`
   width: 100%;
-  border-bottom: 1px solid var(--color-bg);
+  border-bottom: 1px solid currentColor;
   opacity: 0;
   transform: translateY(24px);
   transition:
@@ -25,7 +25,7 @@ const AccordionWrapper = styled.div<AccordionBodyProps>`
 `;
 
 const AccordionBody = styled.div<AccordionBodyProps>`
-  color: var(--color-bg);
+  color: currentColor;
   display: none;
   padding: 0 0 1rem 0;
   font-family: inherit;
@@ -66,7 +66,7 @@ const AccordionToggle = styled.button`
   padding: 1rem 0;
   font-family: inherit;
   font-size: 2rem;
-  color: var(--color-bg);
+  color: currentColor;
 
   @media ${device.tablet} {
     font-size: 2.5rem;
