@@ -31,7 +31,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background: var(--color-bg);
     color: var(--color-text);
-    font-family: 'Belanosima', sans-serif;
+    font-family: "Source Sans 3", sans-serif;
     font-size: 16px;
     transition: background 0.2s ease-in-out;
   }
@@ -66,4 +66,7 @@ export const GlobalStyles = createGlobalStyle`
   strong, b {
     font-weight: ${FontWeight.Bold};
   }
+  h1, h2, h3 {
+    font-family: 'Belanosima', sans-serif;
+  } 
 `;
