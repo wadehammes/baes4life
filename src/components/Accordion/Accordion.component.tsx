@@ -2,6 +2,7 @@ import React, { FC, PropsWithChildren, ReactNode, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { device } from "src/styles/theme";
 import styled, { css } from "styled-components";
+import { rgba } from "polished";
 
 interface AccordionBodyProps {
   $visible: boolean;
@@ -9,7 +10,7 @@ interface AccordionBodyProps {
 
 const AccordionWrapper = styled.div<AccordionBodyProps>`
   width: 100%;
-  border-bottom: 1px solid currentColor;
+  border-bottom: 1px solid ${rgba("white", 0.25)};
   opacity: 0;
   transform: translateY(24px);
   transition:
