@@ -9,6 +9,37 @@ import { device } from "src/styles/theme";
 
 const DetailsContainer = styled(Section)`
   background-color: var(--colors-silver);
+  background: radial-gradient(
+      circle at top,
+      transparent 14%,
+      #bfbeb2 15%,
+      #bfbeb2 19%,
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at bottom,
+      transparent 14%,
+      #bfbeb2 15%,
+      #bfbeb2 19%,
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at right,
+      transparent 14%,
+      #bfbeb2 15%,
+      #bfbeb2 19%,
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at left,
+      transparent 14%,
+      #bfbeb2 15%,
+      #bfbeb2 19%,
+      transparent 20%
+    );
+  background-size: 1em 1em;
+  background-color: #c6c5b9;
+  opacity: 1;
   color: var(--color-bg);
   flex-flow: column nowrap;
   align-items: flex-start;
