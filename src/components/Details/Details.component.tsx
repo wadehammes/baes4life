@@ -8,37 +8,30 @@ import parse from "html-react-parser";
 import { device } from "src/styles/theme";
 
 const DetailsContainer = styled(Section)`
-  background-color: var(--colors-silver);
   background: radial-gradient(
-      circle at top,
-      transparent 14%,
-      #bfbeb2 15%,
-      #bfbeb2 19%,
-      transparent 20%
-    ),
-    radial-gradient(
-      circle at bottom,
-      transparent 14%,
-      #bfbeb2 15%,
-      #bfbeb2 19%,
-      transparent 20%
-    ),
-    radial-gradient(
-      circle at right,
-      transparent 14%,
-      #bfbeb2 15%,
-      #bfbeb2 19%,
-      transparent 20%
-    ),
-    radial-gradient(
-      circle at left,
-      transparent 14%,
-      #bfbeb2 15%,
-      #bfbeb2 19%,
-      transparent 20%
-    );
-  background-size: 1em 1em;
-  background-color: #c6c5b9;
+    circle at center,
+    #c0bfb4,
+    #c0bfb4 10%,
+    transparent 10%,
+    transparent 20%,
+    #c0bfb4 20%,
+    #c0bfb4 30%,
+    transparent 30%,
+    transparent 40%,
+    #c0bfb4 40%,
+    #c0bfb4 50%,
+    transparent 50%,
+    transparent 60%,
+    #c0bfb4 60%,
+    #c0bfb4 70%,
+    transparent 70%,
+    transparent 80%,
+    #c0bfb4 80%,
+    #c0bfb4 90%,
+    transparent 90%
+  );
+  background-size: 2em 2em;
+  background-color: var(--colors-silver);
   opacity: 1;
   color: var(--color-bg);
   flex-flow: column nowrap;
