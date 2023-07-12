@@ -2,7 +2,7 @@ import { useInView } from "react-intersection-observer";
 import { Accordion } from "src/components/Accordion/Accordion.component";
 import { details } from "src/components/Details/Details";
 import { Section } from "src/components/Layout";
-import { H2, P } from "src/components/Typography";
+import { H2 } from "src/components/Typography";
 import { styled } from "styled-components";
 import parse from "html-react-parser";
 import { device } from "src/styles/theme";

@@ -1,5 +1,3 @@
-import { ReactNode } from "react";
-
 interface Detail {
   id: string;
   label: string;
