@@ -7,7 +7,7 @@ import {
   Section,
 } from "src/components/Layout";
 import { ourStoryText } from "src/components/OurStory/OurStory";
-import { H2, P } from "src/components/Typography";
+import { AnimatedH2, P } from "src/components/Typography";
 import { device } from "src/styles/theme";
 import { styled } from "styled-components";
 
@@ -67,7 +67,7 @@ export const OurStory = () => {
       <Container>
         <div>
           <StyledOurStory>
-            <H2 $inView={inView}>Our story</H2>
+            <AnimatedH2 $inView={inView}>Our story</AnimatedH2>
             {ourStoryText.map((paragraph) => (
               <P key={paragraph} $inView={inView}>
                 {paragraph}
