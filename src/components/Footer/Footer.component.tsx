@@ -17,7 +17,7 @@ const FooterSection = styled(Section)`
 export const Footer = () => {
   return (
     <FooterSection>
-      <p>Jen & Wade - Baes4Life &copy; {new Date().getFullYear()}</p>
+      <p>Jen & Wade say "I do" April 21st, 2024</p>
       <Countdown color="light" animate={false} />
     </FooterSection>
   );

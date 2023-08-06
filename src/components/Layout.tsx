@@ -34,10 +34,3 @@ export const ContentContainer = styled.div`
   margin: 0 auto;
   width: 100%;
 `;
-
-export const PolaroidContainer = styled.div`
-  background: var(--colors-white);
-  border-radius: 2px;
-  border: 1px solid var(--colors-silver);
-  padding: 1rem;
-`;

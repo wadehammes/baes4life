@@ -37,7 +37,7 @@ const StyledCountdown = styled.time<{ $animate: boolean }>`
     $animate &&
     css`
       img {
-        animation: ${bounce} 2s linear infinite;
+        animation: ${bounce} 1.5s linear infinite;
       }
     `}
 
