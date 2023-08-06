@@ -1,7 +1,11 @@
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { Animate } from "src/components/Animate/Animate.component";
-import { ContentContainer, Section } from "src/components/Layout";
+import {
+  ContentContainer,
+  PolaroidContainer,
+  Section,
+} from "src/components/Layout";
 import { ourStoryText } from "src/components/OurStory/OurStory";
 import { H2, P } from "src/components/Typography";
 import { device } from "src/styles/theme";
@@ -48,7 +52,7 @@ const Images = styled.div`
   }
 `;
 
-const imageMap = [...new Array(3)].map((image, index: number) => ({
+const imageMap = [...new Array(3)].map((_, index) => ({
   id: index,
   file: `/images/${index}.jpg`,
 }));
@@ -63,7 +67,7 @@ export const OurStory = () => {
       <Container>
         <div>
           <StyledOurStory>
-            <H2>Our story</H2>
+            <H2 $inView={inView}>Our story</H2>
             {ourStoryText.map((paragraph) => (
               <P key={paragraph} $inView={inView}>
                 {paragraph}
@@ -81,18 +85,20 @@ export const OurStory = () => {
         <Images>
           <Animate $visible={inView}>
             {imageMap.map((image) => (
-              <Image
-                src={image.file}
-                width="600"
-                height="400"
-                alt={`Jen and Wade Engagement Photo #${image.id}`}
-                loading="lazy"
-                quality={80}
-                style={{
-                  objectFit: "contain",
-                  height: "auto",
-                }}
-              />
+              <PolaroidContainer>
+                <Image
+                  src={image.file}
+                  width="600"
+                  height="400"
+                  alt={`Jen and Wade Engagement Photo #${image.id}`}
+                  loading="lazy"
+                  quality={80}
+                  style={{
+                    objectFit: "contain",
+                    height: "auto",
+                  }}
+                />
+              </PolaroidContainer>
             ))}
           </Animate>
         </Images>
