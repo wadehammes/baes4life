@@ -61,7 +61,7 @@ const ContentSecurityPolicy = `
   img-src * blob: data:;
   media-src 'none';
   connect-src *;
-  font-src 'self' fonts.gstatic.com;
+  font-src * blob: data: 'self' fonts.gstatic.com;
   worker-src 'self' *.vercel.app;
   manifest-src 'self' *.vercel.app;
 `;

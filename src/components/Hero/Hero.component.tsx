@@ -1,17 +1,45 @@
 import Image from "next/image";
+import { Countdown } from "src/components/Countdown/Countdown.component";
 import { H1, HeroSubText } from "src/components/Typography";
-import { useCountdown } from "src/hooks/useCountdown";
 import { device } from "src/styles/theme";
-import { keyframes, styled } from "styled-components";
+import { styled } from "styled-components";
 import { useWindowSize } from "usehooks-ts";
 
-const rotate = keyframes`
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+const StyledBorderCorner = styled.div`
+  position: absolute;
+  border-color: var(--colors-gold);
+  border-width: 5px;
+  width: 32px;
+  height: 32px;
+  z-index: 1;
+`;
+
+const StyledBorderCornerTopLeft = styled(StyledBorderCorner)`
+  border-top-style: solid;
+  border-left-style: solid;
+  left: 2rem;
+  top: 2rem;
+`;
+
+const StyledBorderCornerTopRight = styled(StyledBorderCorner)`
+  border-top-style: solid;
+  border-right-style: solid;
+  right: 2rem;
+  top: 2rem;
+`;
+
+const StyledBorderCornerBottomLeft = styled(StyledBorderCorner)`
+  border-bottom-style: solid;
+  border-left-style: solid;
+  bottom: 2rem;
+  left: 2rem;
+`;
+
+const StyledBorderCornerBottomRight = styled(StyledBorderCorner)`
+  border-bottom-style: solid;
+  border-right-style: solid;
+  bottom: 2rem;
+  right: 2rem;
 `;
 
 const StyledHeader = styled.header`
@@ -33,6 +61,7 @@ const StyledHero = styled.div`
   text-align: center;
   overflow: hidden;
   color: var(--color-text);
+  position: relative;
 
   > ${StyledHeader} {
     margin: auto;
@@ -50,30 +79,8 @@ const StyledPageArrow = styled.div`
   }
 `;
 
-const StyledCountdown = styled.time`
-  display: flex;
-  justify-content: center;
-  font-size: 1rem;
-  font-family: "Source Sans 3", sans-serif;
-  font-variant-numeric: tabular-nums;
-  text-transform: uppercase;
-  position: relative;
-  transition: transform 0.1s linear;
-
-  svg {
-    position: absolute;
-    top: -28px;
-    animation: ${rotate} 15s linear infinite;
-  }
-
-  &:active {
-    transform: scale(0.95);
-  }
-`;
-
 export const Hero = () => {
   const { width, height } = useWindowSize();
-  const weddingCountdown = useCountdown();
 
   const handleOurStoryScroll = () => {
     document
@@ -88,6 +95,10 @@ export const Hero = () => {
         width: `${width}px`,
       }}
     >
+      <StyledBorderCornerTopLeft />
+      <StyledBorderCornerTopRight />
+      <StyledBorderCornerBottomLeft />
+      <StyledBorderCornerBottomRight />
       <Image
         src="/images/hero.jpg"
         height={height}
@@ -102,6 +113,8 @@ export const Hero = () => {
           zIndex: 0,
           top: 0,
           opacity: 0.45,
+          width: "100%",
+          height: "100%",
         }}
       />
       <StyledHeader>
@@ -109,28 +122,7 @@ export const Hero = () => {
         <HeroSubText>April 20th-22nd, 2024 &mdash; Jupiter, FL</HeroSubText>
       </StyledHeader>
       <StyledPageArrow onClick={handleOurStoryScroll}>
-        <StyledCountdown>
-          <svg viewBox="0 0 100 100" width="100" height="100">
-            <defs>
-              <path
-                id="circle"
-                d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
-              />
-            </defs>
-            <text fontSize="10" fill="white">
-              <textPath xlinkHref="#circle">
-                SAY I DO {weddingCountdown}
-              </textPath>
-            </text>
-          </svg>
-          <Image
-            src="/icons/monstera.svg"
-            height="48"
-            width="48"
-            alt=""
-            role="presentation"
-          />
-        </StyledCountdown>
+        <Countdown color="light" animate={true} />
       </StyledPageArrow>
     </StyledHero>
   );

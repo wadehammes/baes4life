@@ -35,6 +35,12 @@ export const AnimatedH2 = styled(H2)<AnimatedTextProps>`
     opacity 0.5s ease-in-out ${({ $delay }) => `${$delay || 0}ms`};
   opacity: 0;
 
+  span {
+    font-size: 0.9rem;
+    font-weight: ${FontWeight.Regular};
+    color: var(--colors-gold);
+  }
+
   ${({ $inView }) =>
     $inView &&
     css`
@@ -77,5 +83,17 @@ export const P = styled.p<AnimatedTextProps>`
   &:empty {
     display: none;
     padding: 0;
+  }
+`;
+
+export const ButtonLink = styled.a`
+  border: 2px solid white;
+  padding: 1.25rem 1.75rem;
+  color: var(--colors-white);
+  text-decoration: none;
+
+  &:hover {
+    background-color: var(--colors-white);
+    color: var(--colors-black);
   }
 `;

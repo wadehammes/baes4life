@@ -44,7 +44,7 @@ export const GlobalStyles = createGlobalStyle`
     color: var(--color-text);
     font-family: inherit;
     text-decoration: underline;
-    font-weight: ${FontWeight.Bold};
+    font-weight: ${FontWeight.Regular};
 
     &:hover {
       background-color: var(--color-text);
@@ -68,4 +68,13 @@ export const GlobalStyles = createGlobalStyle`
   h1, h2, h3 {
     font-family: 'Belanosima', sans-serif;
   } 
+  .wavy {
+    text-decoration: underline wavy var(--colors-forest);
+  }
+  .swiper, .swiper-wrapper {
+    max-width: 100%;
+  }
+  .image-border {
+    border: 16px solid rgba(255,255,255, 0.1);
+  }
 `;

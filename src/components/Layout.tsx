@@ -18,7 +18,8 @@ export const Section = styled.div`
   justify-content: center;
   gap: 2rem;
   padding: 4rem 2rem;
-  
+  overflow-x: hidden;
+
   @media ${device.tablet} {
     padding: 4rem;
   }
@@ -35,8 +36,8 @@ export const ContentContainer = styled.div`
 `;
 
 export const PolaroidContainer = styled.div`
-  background: white;
+  background: var(--colors-white);
   border-radius: 2px;
-  border: 1px solid lightgray;
+  border: 1px solid var(--colors-silver);
   padding: 1rem;
 `;
