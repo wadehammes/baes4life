@@ -17,20 +17,23 @@ export const H1 = styled.h1<AnimatedTextProps>`
   }
 `;
 
-export const H2 = styled.h2<AnimatedTextProps>`
+export const H2 = styled.h2`
   font-size: 2rem;
   font-weight: ${FontWeight.Regular};
   line-height: 1.2;
   padding-bottom: 1.5rem;
+
+  @media ${device.tablet} {
+    font-size: 3rem;
+  }
+`;
+
+export const AnimatedH2 = styled(H2)<AnimatedTextProps>`
   transform: translateY(1rem);
   transition:
     transform 0.75s ease-in-out ${({ $delay }) => `${$delay || 0}ms`},
     opacity 0.5s ease-in-out ${({ $delay }) => `${$delay || 0}ms`};
   opacity: 0;
-
-  @media ${device.tablet} {
-    font-size: 3rem;
-  }
 
   ${({ $inView }) =>
     $inView &&

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { H1, HeroSubText } from "src/components/Typography";
 import { useCountdown } from "src/hooks/useCountdown";
+import { device } from "src/styles/theme";
 import { keyframes, styled } from "styled-components";
 import { useWindowSize } from "usehooks-ts";
 
@@ -41,8 +42,12 @@ const StyledHero = styled.div`
 const StyledPageArrow = styled.div`
   position: absolute;
   z-index: 2;
-  bottom: 6rem;
+  bottom: 3rem;
   cursor: pointer;
+
+  @media ${device.tablet} {
+    bottom: 6rem;
+  }
 `;
 
 const StyledCountdown = styled.time`
@@ -101,7 +106,7 @@ export const Hero = () => {
       />
       <StyledHeader>
         <H1>Jen & Wade</H1>
-        <HeroSubText>April 21st, 2024 &mdash; Jupiter, FL</HeroSubText>
+        <HeroSubText>April 20th-22nd, 2024 &mdash; Jupiter, FL</HeroSubText>
       </StyledHeader>
       <StyledPageArrow onClick={handleOurStoryScroll}>
         <StyledCountdown>
