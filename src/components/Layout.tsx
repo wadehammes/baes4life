@@ -1,3 +1,4 @@
+import { device } from "src/styles/theme";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -17,6 +18,10 @@ export const Section = styled.div`
   justify-content: center;
   gap: 2rem;
   padding: 4rem 2rem;
+
+  @media ${device.laptop} {
+    padding: 4rem 8rem;
+  }
 `;
 
 export const ContentContainer = styled.div`

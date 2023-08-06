@@ -11,9 +11,10 @@ const AnimateWrapper = styled.div<AnimateWrapperProps>`
   opacity: 0;
   visibility: visible;
   transform: translateY(0.5em);
-  transition: opacity 1s ease-in-out,
-    transform 1s cubic-bezier(0.34, 0.53, 0.59, 1.11);
-  transition-delay: ${({ wait }) => `${wait}ms`};
+  transition:
+    opacity 2s ease-in-out ${({ wait }) => `${wait}ms`},
+    transform 2s cubic-bezier(0.34, 0.53, 0.59, 1.11)
+      ${({ wait }) => `${wait}ms`};
 
   ${({ visible }) =>
     visible &&
@@ -24,14 +25,14 @@ const AnimateWrapper = styled.div<AnimateWrapperProps>`
 `;
 
 interface AnimateProps {
-  visible?: boolean;
-  timing?: number;
+  $visible?: boolean;
+  $timing?: number;
 }
 
 export const Animate: FCWithChildren<AnimateProps> = ({
   children,
-  visible = false,
-  timing = 100,
+  $visible = false,
+  $timing = 200,
 }) =>
   children ? (
     <>
@@ -39,8 +40,8 @@ export const Animate: FCWithChildren<AnimateProps> = ({
         <AnimateWrapper
           // eslint-disable-next-line react/no-array-index-key
           key={i}
-          wait={timing * i}
-          visible={visible}
+          wait={$timing * i}
+          visible={$visible}
         >
           {child}
         </AnimateWrapper>
