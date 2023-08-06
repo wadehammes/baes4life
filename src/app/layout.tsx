@@ -15,7 +15,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <title>Jen and Wade's Wedding Site</title>
-        <link rel="icon" href="favicon.webp" />
+        <link rel="icon" href="favicon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
