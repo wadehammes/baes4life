@@ -8,7 +8,7 @@ const FooterSection = styled(Section)`
   align-items: center;
   justify-content: center;
   flex-flow: column nowrap;
-  gap: 2.5rem;
+  gap: 3rem;
   background: ${darken(0.025, "#25523B")};
   color: var(--colors-white);
   text-align: center;
