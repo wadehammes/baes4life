@@ -32,6 +32,15 @@ const AccordionBody = styled.div<AccordionBodyProps>`
   font-family: inherit;
   font-size: 1.25rem;
 
+  p {
+    line-height: 1.5;
+    margin-bottom: 2rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   @media ${device.tablet} {
     font-size: 1.5rem;
   }
@@ -104,6 +113,7 @@ export const Accordion: FC<PropsWithChildren<AccordionProps>> = ({
 }) => {
   const { ref, inView } = useInView({
     threshold: 0.75,
+    triggerOnce: true,
   });
   const [bodyVisible, setBodyVisible] = useState<boolean>(false);
 

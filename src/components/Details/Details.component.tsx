@@ -13,7 +13,7 @@ const DetailsContainer = styled(Section)`
   color: var(--color-white);
   flex-flow: column nowrap;
   align-items: flex-start;
-  gap: 1.5rem;
+  gap: 4rem;
 
   @media ${device.tablet} {
     flex-flow: row nowrap;
@@ -33,7 +33,7 @@ const DetailsColumns = styled.div`
 export const Details = () => (
   <DetailsContainer>
     <DetailsColumns>
-      <H2 style={{ padding: 0 }}>Details</H2>
+      <H2 style={{ padding: 0 }}>The juicy details</H2>
     </DetailsColumns>
     <DetailsColumns>
       {details.map((detail) => (
@@ -43,7 +43,7 @@ export const Details = () => (
           $accordionId={detail.id}
           $accordionLabel={detail.label}
         >
-          {detail.children.map((child) => parse(child))}
+          {detail.children.map((child, index) => parse(child))}
         </Accordion>
       ))}
     </DetailsColumns>

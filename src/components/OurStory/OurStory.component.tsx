@@ -1,15 +1,12 @@
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { Animate } from "src/components/Animate/Animate.component";
-import {
-  ContentContainer,
-  PolaroidContainer,
-  Section,
-} from "src/components/Layout";
+import { ContentContainer, Section } from "src/components/Layout";
 import { ourStoryText } from "src/components/OurStory/OurStory";
 import { AnimatedH2, P } from "src/components/Typography";
 import { device } from "src/styles/theme";
 import { styled } from "styled-components";
+import parse from "html-react-parser";
 
 const StyledOurStorySection = styled(Section)`
   background-color: var(--color-text);
@@ -52,7 +49,7 @@ const Images = styled.div`
   }
 `;
 
-const imageMap = [...new Array(3)].map((_, index) => ({
+const imageMap = Array.from({ length: 3 }).map((_, index) => ({
   id: index,
   file: `/images/${index}.jpg`,
 }));
@@ -60,6 +57,7 @@ const imageMap = [...new Array(3)].map((_, index) => ({
 export const OurStory = () => {
   const { ref, inView } = useInView({
     threshold: 0.2,
+    triggerOnce: true,
   });
 
   return (
@@ -67,10 +65,12 @@ export const OurStory = () => {
       <Container>
         <div>
           <StyledOurStory>
-            <AnimatedH2 $inView={inView}>Our story</AnimatedH2>
+            <AnimatedH2 $inView={inView}>
+              Our story <span>(according to ChatGPT)</span>
+            </AnimatedH2>
             {ourStoryText.map((paragraph) => (
               <P key={paragraph} $inView={inView}>
-                {paragraph}
+                {parse(paragraph)}
               </P>
             ))}
             <Image
@@ -85,20 +85,19 @@ export const OurStory = () => {
         <Images>
           <Animate $visible={inView}>
             {imageMap.map((image) => (
-              <PolaroidContainer>
-                <Image
-                  src={image.file}
-                  width="600"
-                  height="400"
-                  alt={`Jen and Wade Engagement Photo #${image.id}`}
-                  loading="lazy"
-                  quality={80}
-                  style={{
-                    objectFit: "contain",
-                    height: "auto",
-                  }}
-                />
-              </PolaroidContainer>
+              <Image
+                key={image.id}
+                src={image.file}
+                width="600"
+                height="400"
+                alt={`Jen and Wade Engagement Photo #${image.id}`}
+                loading="lazy"
+                quality={80}
+                style={{
+                  objectFit: "contain",
+                  height: "auto",
+                }}
+              />
             ))}
           </Animate>
         </Images>
