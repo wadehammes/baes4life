@@ -18,9 +18,13 @@ export const Section = styled.div`
   justify-content: center;
   gap: 2rem;
   padding: 4rem 2rem;
-
+  
   @media ${device.tablet} {
     padding: 4rem;
+  }
+
+  @media ${device.laptop} {
+    padding: 4rem 8rem;
   }
 `;
 
@@ -28,4 +32,11 @@ export const ContentContainer = styled.div`
   max-width: 84ch;
   margin: 0 auto;
   width: 100%;
+`;
+
+export const PolaroidContainer = styled.div`
+  background: white;
+  border-radius: 2px;
+  border: 1px solid lightgray;
+  padding: 1rem;
 `;
