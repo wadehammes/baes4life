@@ -31,12 +31,12 @@ export default function RootLayout({
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Jen and Wade's Wedding Site - April 21st, 2024 - Jupiter, FL"
+          content="Jen and Wade - April 21st, 2024 - Jupiter, FL"
         />
         <meta property="og:url" content="https://jenandwade.com" />
         <meta
           property="og:image"
-          content="https://jenandwade.com/gallery/5.jpg"
+          content="https://jenandwade.com/images/og.jpg"
         />
         <meta
           property="og:description"
