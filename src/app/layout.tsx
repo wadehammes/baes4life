@@ -33,10 +33,10 @@ export default function RootLayout({
           property="og:title"
           content="Jen and Wade - April 21st, 2024 - Jupiter, FL"
         />
-        <meta property="og:url" content="https://jenandwade.com" />
+        <meta property="og:url" content="https://www.jenandwade.com" />
         <meta
           property="og:image"
-          content="https://jenandwade.com/images/og.png"
+          content="https://www.jenandwade.com/images/og.png"
         />
         <meta
           property="og:description"
