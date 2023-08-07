@@ -58,11 +58,15 @@ const StyledHero = styled.div`
   align-items: center;
   justify-content: center;
   min-width: 100%;
-  min-height: 800px;
+  min-height: 100vh;
   text-align: center;
   overflow: hidden;
   color: var(--color-text);
   position: relative;
+
+  @media screen and (max-height: 800px) {
+    min-height: 800px;
+  }
 
   > ${StyledHeader} {
     margin: auto;
