@@ -14,7 +14,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>Jen and Wade's Wedding Site</title>
+        <title>
+          Jen and Wade's Wedding Site - April 21st, 2024 - Jupiter, FL
+        </title>
         <link rel="icon" href="favicon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -26,6 +28,20 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;700&family=Source+Sans+3:wght@400;700&display=swap"
           rel="stylesheet"
         />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Jen and Wade's Wedding Site - April 21st, 2024 - Jupiter, FL"
+        />
+        <meta property="og:url" content="https://jenandwade.com" />
+        <meta
+          property="og:image"
+          content="https://jenandwade.com/gallery/5.jpg"
+        />
+        <meta
+          property="og:description"
+          content="Jen and wade are saying 'I do' on April 21st, 2024 in Jupiter, FL."
+        ></meta>
       </head>
       <body>
         <StyledComponentsRegistry>

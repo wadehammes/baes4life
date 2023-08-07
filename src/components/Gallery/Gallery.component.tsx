@@ -97,7 +97,8 @@ export const Gallery = () => {
               width="1000"
               height={GALLERY_SIZE}
               alt={`Jen and Wade Engagement Photo #${image.id}`}
-              quality={100}
+              quality={80}
+              loading="lazy"
               style={{
                 objectFit: "cover",
                 height: `${GALLERY_SIZE}px`,
