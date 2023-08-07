@@ -31,7 +31,7 @@ const DetailsColumns = styled.div`
 `;
 
 export const Details = () => (
-  <DetailsContainer>
+  <DetailsContainer id="details">
     <DetailsColumns>
       <H2 style={{ padding: 0 }}>The juicy details</H2>
     </DetailsColumns>

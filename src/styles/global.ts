@@ -25,6 +25,9 @@ export const GlobalStyles = createGlobalStyle`
     border: 0;
     vertical-align: baseline;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   html,
   body {
     background: var(--color-bg);
@@ -32,7 +35,7 @@ export const GlobalStyles = createGlobalStyle`
     font-family: "Source Sans 3", sans-serif;
     font-weight: ${FontWeight.Regular};
     font-size: 16px;
-    transition: background 0.2s ease-in-out;
+    transition: background 0.2s linear;
   }
   body {
     line-height: 1;

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Countdown } from "src/components/Countdown/Countdown.component";
+import { Navigation } from "src/components/Navigation/Navigation.component";
 import { H1, HeroSubText } from "src/components/Typography";
 import { device } from "src/styles/theme";
 import { styled } from "styled-components";
@@ -57,7 +58,7 @@ const StyledHero = styled.div`
   align-items: center;
   justify-content: center;
   min-width: 100%;
-  min-height: 100vh;
+  min-height: 800px;
   text-align: center;
   overflow: hidden;
   color: var(--color-text);
@@ -99,6 +100,7 @@ export const Hero = () => {
       <StyledBorderCornerTopRight />
       <StyledBorderCornerBottomLeft />
       <StyledBorderCornerBottomRight />
+      <Navigation />
       <Image
         src="/images/hero.jpg"
         height={height}
