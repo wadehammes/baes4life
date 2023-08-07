@@ -36,7 +36,7 @@ export default function RootLayout({
         <meta property="og:url" content="https://jenandwade.com" />
         <meta
           property="og:image"
-          content="https://jenandwade.com/images/og.jpg"
+          content="https://jenandwade.com/images/og.png"
         />
         <meta
           property="og:description"
