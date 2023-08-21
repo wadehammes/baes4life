@@ -64,8 +64,8 @@ const StyledHero = styled.div`
   color: var(--color-text);
   position: relative;
 
-  @media screen and (max-height: 800px) {
-    min-height: 800px;
+  @media screen and (max-height: 520px) {
+    min-height: 520px;
   }
 
   > ${StyledHeader} {

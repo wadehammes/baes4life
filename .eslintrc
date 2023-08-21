@@ -437,7 +437,7 @@
         ]
       }
     ],
-    "testing-library/no-render-in-setup": [
+    "testing-library/no-render-in-lifecycle": [
       "error",
       {
         "allowTestingFrameworkSetupHook": "beforeEach"
