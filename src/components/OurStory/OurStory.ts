@@ -1,5 +1,5 @@
 export const ourStoryText = [
-  "Once upon a time, in the bustling world of online dating , <span class='wavy'>Wade and Jen</span> found themselves on Hinge, a magical app that promised to connect hearts 💕. It was during the holiday season when they stumbled upon each other's profiles, just as they were making their way home for some much-needed family time.",
+  "Once upon a time, in the bustling world of online dating , <span class='wavy'>Jen & Wade</span> found themselves on Hinge, a magical app that promised to connect hearts 💕. It was during the holiday season when they stumbled upon each other's profiles, just as they were making their way home for some much-needed family time.",
 
   "<span class='wavy'>Jen</span> 💃🏻, full of excitement, realized that this would be the first time she'd spend the holidays without any of her siblings. Feeling a mix of nerves and anticipation, she longed for someone to keep her company during this uncharted adventure.",
 

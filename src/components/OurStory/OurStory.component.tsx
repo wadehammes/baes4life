@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
-import { Animate } from "src/components/Animate/Animate.component";
 import { ContentContainer, Section } from "src/components/Layout";
 import { ourStoryText } from "src/components/OurStory/OurStory";
 import { AnimatedH2, P } from "src/components/Typography";
@@ -10,6 +9,16 @@ import parse from "html-react-parser";
 
 const StyledOurStorySection = styled(Section)`
   background-color: var(--color-text);
+  background-color: var(--color-text);
+  opacity: 0.8;
+  background-size: 29px 31px;
+  background-image: repeating-linear-gradient(
+    0deg,
+    #fafafa,
+    #fafafa 1px,
+    #ffffff 1px,
+    #ffffff
+  );
   padding: 4rem 2rem;
 
   @media ${device.laptop} {
@@ -23,7 +32,7 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   gap: 4rem;
-  max-width: 70rem;
+  max-width: 80rem;
   margin: 0 auto;
 
   @media ${device.laptop} {
@@ -33,26 +42,12 @@ const Container = styled.div`
 
 const StyledOurStory = styled(ContentContainer)`
   color: var(--color-bg);
-  flex: 2;
-`;
+  max-width: 100ch;
 
-const Images = styled.div`
-  display: none;
-  flex-flow: column nowrap;
-  gap: 1rem;
-  padding-top: 0;
-  flex: 1;
-
-  @media ${device.laptop} {
-    display: flex;
-    padding-top: 4rem;
+  ${P} {
+    font-size: 1.5rem;
   }
 `;
-
-const imageMap = Array.from({ length: 3 }).map((_, index) => ({
-  id: index,
-  file: `/images/${index}.jpg`,
-}));
 
 export const OurStory = () => {
   const { ref, inView } = useInView({
@@ -63,44 +58,23 @@ export const OurStory = () => {
   return (
     <StyledOurStorySection id="our-story" ref={ref}>
       <Container>
-        <div>
-          <StyledOurStory>
-            <AnimatedH2 $inView={inView}>
-              Our story <span>(according to ChatGPT)</span>
-            </AnimatedH2>
-            {ourStoryText.map((paragraph) => (
-              <P key={paragraph} $inView={inView}>
-                {parse(paragraph)}
-              </P>
-            ))}
-            <Image
-              src="/icons/birds-of-paradise.svg"
-              height="64"
-              width="64"
-              alt=""
-              role="presentation"
-            />
-          </StyledOurStory>
-        </div>
-        <Images>
-          <Animate $visible={inView}>
-            {imageMap.map((image) => (
-              <Image
-                key={image.id}
-                src={image.file}
-                width="600"
-                height="400"
-                alt={`Jen and Wade Engagement Photo #${image.id}`}
-                loading="lazy"
-                quality={80}
-                style={{
-                  objectFit: "contain",
-                  height: "auto",
-                }}
-              />
-            ))}
-          </Animate>
-        </Images>
+        <StyledOurStory>
+          <AnimatedH2 $inView={inView}>
+            Our story <span>(according to ChatGPT)</span>
+          </AnimatedH2>
+          {ourStoryText.map((paragraph, index) => (
+            <P key={paragraph} $inView={inView} $delay={index}>
+              {parse(paragraph)}
+            </P>
+          ))}
+          <Image
+            src="/icons/birds-of-paradise.svg"
+            height="64"
+            width="64"
+            alt=""
+            role="presentation"
+          />
+        </StyledOurStory>
       </Container>
     </StyledOurStorySection>
   );

@@ -8,23 +8,23 @@ interface AnimatedTextProps {
 }
 
 export const H1 = styled.h1<AnimatedTextProps>`
-  font-size: 3.5rem;
+  font-size: 3.75rem;
   font-weight: ${FontWeight.Semibold};
   line-height: 1;
 
   @media ${device.tablet} {
-    font-size: 6rem;
+    font-size: 7rem;
   }
 `;
 
 export const H2 = styled.h2`
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: ${FontWeight.Regular};
   line-height: 1.2;
   padding-bottom: 1.5rem;
 
   @media ${device.tablet} {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 `;
 
@@ -68,8 +68,9 @@ export const P = styled.p<AnimatedTextProps>`
   font-size: 1.15rem;
   transform: translateY(1rem);
   transition:
-    transform 0.75s ease-in-out ${({ $delay }) => `${$delay || 0}ms`},
-    opacity 0.5s ease-in-out ${({ $delay }) => `${$delay || 0}ms`};
+    transform 0.75s ease-in-out
+      ${({ $delay }) => `${$delay ? $delay * 250 : 0}ms`},
+    opacity 0.5s ease-in-out ${({ $delay }) => `${$delay ? $delay * 250 : 0}ms`};
   opacity: 0;
   letter-spacing: 0.05em;
 
