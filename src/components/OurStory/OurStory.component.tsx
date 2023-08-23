@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { useInView } from "react-intersection-observer";
 import { ContentContainer, Section } from "src/components/Layout";
 import { ourStoryText } from "src/components/OurStory/OurStory";
 import { H2, P } from "src/components/Typography";
@@ -51,22 +50,15 @@ const StyledOurStory = styled(ContentContainer)`
 `;
 
 export const OurStory = () => {
-  const { ref, inView } = useInView({
-    threshold: 0.2,
-    triggerOnce: true,
-  });
-
   return (
-    <StyledOurStorySection id="our-story" ref={ref}>
+    <StyledOurStorySection id="our-story">
       <Container>
         <StyledOurStory>
           <H2>
             Our story <span>(according to ChatGPT)</span>
           </H2>
-          {ourStoryText.map((paragraph, index) => (
-            <P key={paragraph} $inView={inView} $delay={index}>
-              {parse(paragraph)}
-            </P>
+          {ourStoryText.map((paragraph) => (
+            <P key={paragraph}>{parse(paragraph)}</P>
           ))}
           <Image
             src="/icons/birds-of-paradise.svg"
