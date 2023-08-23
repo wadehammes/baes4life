@@ -23,6 +23,12 @@ export const H2 = styled.h2`
   line-height: 1.2;
   padding-bottom: 1.5rem;
 
+  span {
+    font-size: 0.9rem;
+    font-weight: ${FontWeight.Regular};
+    color: var(--colors-gold);
+  }
+
   @media ${device.tablet} {
     font-size: 4rem;
   }
@@ -34,12 +40,6 @@ export const AnimatedH2 = styled(H2)<AnimatedTextProps>`
     transform 0.75s ease-in-out ${({ $delay }) => `${$delay || 0}ms`},
     opacity 0.5s ease-in-out ${({ $delay }) => `${$delay || 0}ms`};
   opacity: 0;
-
-  span {
-    font-size: 0.9rem;
-    font-weight: ${FontWeight.Regular};
-    color: var(--colors-gold);
-  }
 
   ${({ $inView }) =>
     $inView &&

@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { ContentContainer, Section } from "src/components/Layout";
 import { ourStoryText } from "src/components/OurStory/OurStory";
-import { AnimatedH2, P } from "src/components/Typography";
+import { H2, P } from "src/components/Typography";
 import { device } from "src/styles/theme";
 import { styled } from "styled-components";
 import parse from "html-react-parser";
@@ -46,6 +46,7 @@ const StyledOurStory = styled(ContentContainer)`
 
   ${P} {
     font-size: 1.5rem;
+    opacity: 1;
   }
 `;
 
@@ -59,9 +60,9 @@ export const OurStory = () => {
     <StyledOurStorySection id="our-story" ref={ref}>
       <Container>
         <StyledOurStory>
-          <AnimatedH2 $inView={inView}>
+          <H2>
             Our story <span>(according to ChatGPT)</span>
-          </AnimatedH2>
+          </H2>
           {ourStoryText.map((paragraph, index) => (
             <P key={paragraph} $inView={inView} $delay={index}>
               {parse(paragraph)}
