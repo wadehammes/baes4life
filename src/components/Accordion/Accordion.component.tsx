@@ -56,6 +56,7 @@ const AccordionParentItem = styled.span`
   display: block;
   text-align: left;
   padding-right: 1.5em;
+  line-height: 1.1;
 `;
 
 const AccordionToggleIcon = styled.span`
