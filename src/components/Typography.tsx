@@ -20,8 +20,8 @@ export const H1 = styled.h1<AnimatedTextProps>`
 export const H2 = styled.h2`
   font-size: 2.5rem;
   font-weight: ${FontWeight.Regular};
-  line-height: 1.2;
-  padding-bottom: 1.5rem;
+  line-height: 1.25;
+  padding-bottom: 0;
 
   span {
     font-size: 0.9rem;

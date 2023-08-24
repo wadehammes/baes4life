@@ -7,17 +7,14 @@ import { styled } from "styled-components";
 import parse from "html-react-parser";
 
 const StyledOurStorySection = styled(Section)`
-  background-color: var(--color-text);
-  background-color: var(--color-text);
-  opacity: 0.8;
-  background-size: 29px 31px;
-  background-image: repeating-linear-gradient(
-    0deg,
-    #fafafa,
-    #fafafa 1px,
-    #ffffff 1px,
-    #ffffff
-  );
+  background-color: #ffffff;
+  opacity: 1;
+  background-image: radial-gradient(#dedede 0.5px, transparent 0.5px),
+    radial-gradient(#dedede 0.5px, #ffffff 0.5px);
+  background-size: 20px 20px;
+  background-position:
+    0 0,
+    10px 10px;
   padding: 4rem 2rem;
 
   @media ${device.laptop} {
@@ -33,10 +30,6 @@ const Container = styled.div`
   gap: 4rem;
   max-width: 80rem;
   margin: 0 auto;
-
-  @media ${device.laptop} {
-    flex-flow: row nowrap;
-  }
 `;
 
 const StyledOurStory = styled(ContentContainer)`
@@ -44,8 +37,12 @@ const StyledOurStory = styled(ContentContainer)`
   max-width: 100ch;
 
   ${P} {
-    font-size: 1.5rem;
+    font-size: 1.15rem;
     opacity: 1;
+
+    @media ${device.laptop} {
+      font-size: 1.5rem;
+    }
   }
 `;
 
