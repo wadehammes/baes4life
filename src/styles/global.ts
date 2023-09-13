@@ -77,7 +77,8 @@ export const GlobalStyles = createGlobalStyle`
   .swiper, .swiper-wrapper {
     max-width: 100%;
   }
-  .image-border {
+  .details-where img {
+    width: 100%;
     border: 16px solid rgba(255,255,255, 0.1);
   }
 `;

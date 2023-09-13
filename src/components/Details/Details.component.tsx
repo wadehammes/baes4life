@@ -43,7 +43,7 @@ export const Details = () => (
           $accordionId={detail.id}
           $accordionLabel={detail.label}
         >
-          {detail.children.map((child, index) => parse(child))}
+          {detail.markdown}
         </Accordion>
       ))}
     </DetailsColumns>
