@@ -82,7 +82,7 @@ export const GlobalStyles = createGlobalStyle`
     border: 16px solid rgba(255,255,255, 0.1);
   }
   ul {
-    padding: 0 0 2em 2em;
+    padding: 0 0 1.5em 2em;
     line-height: 1.2;
   }
 `;

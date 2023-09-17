@@ -1,6 +1,7 @@
 import {
   accommodationsMarkdown,
   attireMarkdown,
+  registryMarkdown,
   scheduleMarkdown,
   whenMarkdown,
   whereMarkdown,
@@ -44,12 +45,10 @@ export const details: Detail[] = [
     parentItem: "<span>Schedule of events</span>",
     markdown: scheduleMarkdown,
   },
-  // {
-  //   id: "detail-registry",
-  //   label: "The wedding registry?",
-  //   parentItem: "<span>Registry</span>",
-  //   children: [
-  //     "<p key='1'>We will have our registry ready to go in a few months so check back!</p>",
-  //   ],
-  // },
+  {
+    id: "detail-registry",
+    label: "The wedding registry?",
+    parentItem: "<span>Registry</span>",
+    markdown: registryMarkdown,
+  },
 ];

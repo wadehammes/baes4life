@@ -53,3 +53,7 @@ export const scheduleMarkdown = `
   - 7-10pm - dinner/dancing
   - 10pm-12am - after party
 `;
+
+export const registryMarkdown = `
+  We will have our registry ready to go in a few months so check back!
+`;
