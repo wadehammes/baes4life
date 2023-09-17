@@ -44,7 +44,8 @@ export const accommodationsMarkdown = `
 export const scheduleMarkdown = `
   **Saturday, April 20th, 2024**
 
-  7:30pm - following the rehearsal cocktail party, join us for drinks at **Guanabanas Restaurant** at .
+  - 5:30-7:30pm - wedding party rehearsal cocktail party
+  - 7:30pm - come say hi at **Guanabanas Restaurant**
 
   **Sunday, April 21st, 2024**
 
@@ -56,4 +57,21 @@ export const scheduleMarkdown = `
 
 export const registryMarkdown = `
   We will have our registry ready to go in a few months so check back!
+`;
+
+export const thingsToDoMarkdown = `
+  Have a beach day on Saturday afternoon! There are multiple beach access points including DuBois Park, Jupiter Beach Park, Carlin Park, Ocean Cay Park, Juno Beach Park. We have frequented Carlin Park many times and highly recommend it. Also highly recommend checking out the Jupiter Lighthouse which will be the backdrop of our wedding ceremony.
+
+  **Restaurants**
+
+  - Miller's Ale House 
+  - Dune Dog Cafe
+  - Duffy's Sports Grill
+  - Dive Bar Restuarant 
+  - Schooners 
+  - Topside Rooftop Tapas Bar 
+  - U-Tiki 
+  - Square Grouper 
+  - Guanabanas 
+  - Latitudes Restaurant at Jupiter Beach Resort & Spa Hotel
 `;

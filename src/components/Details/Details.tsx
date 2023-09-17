@@ -3,6 +3,7 @@ import {
   attireMarkdown,
   registryMarkdown,
   scheduleMarkdown,
+  thingsToDoMarkdown,
   whenMarkdown,
   whereMarkdown,
 } from "src/components/Details/markdown";
@@ -38,6 +39,12 @@ export const details: Detail[] = [
     label: "What are the travel and accommodations for the wedding?",
     parentItem: "<span>Accommodations / travel</span>",
     markdown: accommodationsMarkdown,
+  },
+  {
+    id: "detail-things-to-do",
+    label: "What are some things to do in Jupiter, FL?",
+    parentItem: "<span>Things to do</span>",
+    markdown: thingsToDoMarkdown,
   },
   {
     id: "detail-schedule",
