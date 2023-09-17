@@ -77,7 +77,12 @@ export const GlobalStyles = createGlobalStyle`
   .swiper, .swiper-wrapper {
     max-width: 100%;
   }
-  .image-border {
+  .detail-where img {
+    width: 100%;
     border: 16px solid rgba(255,255,255, 0.1);
+  }
+  ul {
+    padding: 0 0 1.5em 2em;
+    line-height: 1.2;
   }
 `;
