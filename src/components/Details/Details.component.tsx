@@ -5,6 +5,7 @@ import { H2 } from "src/components/Typography";
 import { styled } from "styled-components";
 import parse from "html-react-parser";
 import { device } from "src/styles/theme";
+import ReactMarkdown from "react-markdown";
 
 const DetailsContainer = styled(Section)`
   background-size: 2em 2em;
@@ -43,7 +44,7 @@ export const Details = () => (
           $accordionId={detail.id}
           $accordionLabel={detail.label}
         >
-          {detail.markdown}
+          <ReactMarkdown children={detail.markdown} className={detail.id} />
         </Accordion>
       ))}
     </DetailsColumns>
