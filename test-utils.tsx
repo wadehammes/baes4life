@@ -1,6 +1,6 @@
 import React, { FC, ReactElement } from "react";
 import { render, RenderOptions } from "@testing-library/react";
-import { RouterContext } from "next/dist/shared/lib/router-context";
+import { RouterContext } from "next/dist/shared/lib/router-context.shared-runtime";
 import { NextRouter } from "next/router";
 import { PropsWithChildrenOnly } from "src/@types/react";
 import { CSSRootVariables } from "src/styles/cssVariables";
@@ -41,7 +41,7 @@ const Providers: FC<PropsWithChildrenOnly> = ({ children }) => (
 
 const customRender = (
   ui: ReactElement,
-  options?: Omit<RenderOptions, "queries">,
+  options?: Omit<RenderOptions, "queries">
 ) => render(ui, { wrapper: Providers, ...options });
 
 export * from "@testing-library/react";
