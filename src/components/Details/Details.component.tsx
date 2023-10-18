@@ -1,3 +1,5 @@
+/* eslint-disable eslint-comments/disable-enable-pair */
+/* eslint-disable jsx-a11y/anchor-has-content */
 import { Accordion } from "src/components/Accordion/Accordion.component";
 import { details } from "src/components/Details/Details";
 import { Section } from "src/components/Layout";
@@ -44,7 +46,17 @@ export const Details = () => (
           $accordionId={detail.id}
           $accordionLabel={detail.label}
         >
-          <ReactMarkdown children={detail.markdown} className={detail.id} />
+          <ReactMarkdown
+            children={detail.markdown}
+            className={detail.id}
+            components={{
+              a(props) {
+                const { node, href, ...rest } = props;
+
+                return <a href={href?.replaceAll("&amp;", "&")} {...rest} />;
+              },
+            }}
+          />
         </Accordion>
       ))}
     </DetailsColumns>
