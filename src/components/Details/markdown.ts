@@ -29,9 +29,9 @@ export const accommodationsMarkdown = `
 
   We are staying at the **Jupiter Beach Resort & Spa**, we have a room block with limited availability for those who are interested in staying there. [Book now](https://reservations.opalcollection.com/jupiter-beach/availability.asp?startDate=04/18/2024&endDate=04/23/2024&requesttype=invBlockCode&code=KIAWED0424)
 
-  Second option: [**La Quinta Inn by Wyndham at Jupiter**](https://www.wyndhamhotels.com/laquinta/jupiter-florida/la-quinta-inn-jupiter/overview?CID=LC:LQ::GGL:RIO:National:52716&iata=00093796), please [call to book](tel:1-561-575-7201) for the Kiarsis + Hammes Wedding, to gain a discount you must book before March 19th, 2024.
+  Second option: [**La Quinta Inn by Wyndham at Jupiter**](https://www.wyndhamhotels.com/laquinta/jupiter-florida/la-quinta-inn-jupiter/overview?CID=LC:LQ::GGL:RIO:National:52716&iata=00093796), please call **561-575-7201** to book for the Kiarsis + Hammes Wedding, to gain a discount you must book before March 19th, 2024.
 
-  Third option: [**Comfort Inn & Suites Jupiter I-95**](https://www.choicehotels.com/florida/jupiter/comfort-inn-hotels/fl657?mc=llgoxxpx), please [call to book](tel:1-561-745-7997) for the Kiarsis + Hammes Wedding, to gain a discount you must book before March 1st, 2024.
+  Third option: [**Comfort Inn & Suites Jupiter I-95**](https://www.choicehotels.com/florida/jupiter/comfort-inn-hotels/fl657?mc=llgoxxpx), please call **561-745-7997** to book for the Kiarsis + Hammes Wedding, to gain a discount you must book before March 1st, 2024.
 
   There are additional hotels available in the area if these are booked or not what you would like:
   - Jupiter Waterfront Inn 
