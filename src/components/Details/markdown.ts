@@ -38,14 +38,13 @@ export const accommodationsMarkdown = `
   - Best Western Intracoastal Inn 
   - Wyndham Grand At Jupiter Harbourside Place
 
-  Feel free to look into AirBnbs, VRBO, etc. if you would like to get a house.
+  Feel free to look into AirBnbs, VRBO, etc. if you would like to get a house. Lots of options!
 `;
 
 export const scheduleMarkdown = `
   **Saturday, April 20th, 2024**
 
-  - 5:30-7:30pm - wedding party rehearsal cocktail party
-  - 7:30pm - come say hi at **Guanabanas Restaurant**
+  - TBD on rehearsal and welcome party
 
   **Sunday, April 21st, 2024**
 
