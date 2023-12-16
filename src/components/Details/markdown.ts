@@ -44,8 +44,7 @@ export const accommodationsMarkdown = `
 export const scheduleMarkdown = `
   **Saturday, April 20th, 2024**
 
-  - 5:30-7:30pm - wedding party rehearsal cocktail party
-  - 7:30pm - come say hi at **Guanabanas Restaurant**
+  - TBD on rehearsal and welcome party
 
   **Sunday, April 21st, 2024**
 
