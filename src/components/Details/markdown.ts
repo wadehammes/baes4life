@@ -27,7 +27,7 @@ export const accommodationsMarkdown = `
 
   **Hotels/Lodging**
 
-  We are staying at the **Jupiter Beach Resort & Spa**, we have a room block with limited availability for those who are interested in staying there. [Book now](https://reservations.opalcollection.com/jupiter-beach/availability.asp?startDate=04/20/2024&endDate=04/23/2024&requesttype=invBlockCode&code=KIAWED0424)
+  We are staying at the **Jupiter Beach Resort & Spa**, we have a room block with limited availability for those who are interested in staying there. [Book now](https://reservations.opalcollection.com/jupiter-beach/availability.asp?startDate=04/20/2024&endDate=04/22/2024&requesttype=invBlockCode&code=KIAWED0424)
 
   Second option: [**La Quinta Inn by Wyndham at Jupiter**](https://www.wyndhamhotels.com/laquinta/jupiter-florida/la-quinta-inn-jupiter/overview?CID=LC:LQ::GGL:RIO:National:52716&iata=00093796), please call **561-575-7201** to book for the Kiarsis + Hammes Wedding, to gain a discount you must book before March 19th, 2024.
 
@@ -38,7 +38,7 @@ export const accommodationsMarkdown = `
   - Best Western Intracoastal Inn 
   - Wyndham Grand At Jupiter Harbourside Place
 
-  Feel free to look into AirBnbs, VRBO, etc. if you would like to get a house.
+  Feel free to look into AirBnbs, VRBO, etc. if you would like to get a house. Lots of options!
 `;
 
 export const scheduleMarkdown = `
