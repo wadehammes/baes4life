@@ -27,7 +27,7 @@ export const accommodationsMarkdown = `
 
   **Hotels/Lodging**
 
-  We are staying at the **Jupiter Beach Resort & Spa**, we have a room block with limited availability for those who are interested in staying there. [Book now](https://reservations.opalcollection.com/jupiter-beach/availability.asp?startDate=04/18/2024&endDate=04/23/2024&requesttype=invBlockCode&code=KIAWED0424)
+  We are staying at the **Jupiter Beach Resort & Spa**, we have a room block with limited availability for those who are interested in staying there. [Book now](https://reservations.opalcollection.com/jupiter-beach/availability.asp?startDate=04/20/2024&endDate=04/23/2024&requesttype=invBlockCode&code=KIAWED0424)
 
   Second option: [**La Quinta Inn by Wyndham at Jupiter**](https://www.wyndhamhotels.com/laquinta/jupiter-florida/la-quinta-inn-jupiter/overview?CID=LC:LQ::GGL:RIO:National:52716&iata=00093796), please call **561-575-7201** to book for the Kiarsis + Hammes Wedding, to gain a discount you must book before March 19th, 2024.
 
@@ -44,8 +44,7 @@ export const accommodationsMarkdown = `
 export const scheduleMarkdown = `
   **Saturday, April 20th, 2024**
 
-  - 5:30-7:30pm - wedding party rehearsal cocktail party
-  - 7:30pm - come say hi at **Guanabanas Restaurant**
+  - TBD on rehearsal and welcome party
 
   **Sunday, April 21st, 2024**
 
