@@ -7,6 +7,7 @@ import { Gallery } from "src/components/Gallery/Gallery.component";
 import { Hero } from "src/components/Hero/Hero.component";
 import { OurStory } from "src/components/OurStory/OurStory.component";
 import { PageContainer } from "src/components/PageContainer/Page.component";
+import { Registry } from "src/components/Registry/Registry.component";
 
 const Home: FC = () => {
   return (
@@ -15,6 +16,7 @@ const Home: FC = () => {
       <OurStory />
       <Gallery />
       <Details />
+      <Registry />
       <Footer />
     </PageContainer>
   );

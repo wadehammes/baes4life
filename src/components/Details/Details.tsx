@@ -2,6 +2,7 @@ import {
   accommodationsMarkdown,
   attireMarkdown,
   registryMarkdown,
+  rsvpMarkdown,
   scheduleMarkdown,
   thingsToDoMarkdown,
   whenMarkdown,
@@ -57,5 +58,11 @@ export const details: Detail[] = [
     label: "The wedding registry?",
     parentItem: "<span>Registry</span>",
     markdown: registryMarkdown,
+  },
+  {
+    id: "detail-rsvp",
+    label: "RSVP to the wedding",
+    parentItem: "<span>RSVP</span>",
+    markdown: rsvpMarkdown,
   },
 ];

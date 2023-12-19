@@ -48,6 +48,7 @@ const scriptSrc = [
   "*.vercel.app",
   "*.googletagmanager.com",
   "vercel.live",
+  "widget.zola.com",
 ];
 
 const ContentSecurityPolicy = `
@@ -55,6 +56,7 @@ const ContentSecurityPolicy = `
   script-src ${scriptSrc.join(" ")};
   child-src *.youtube.com *.google.com *.twitter.com vercel.live;
   style-src 'self' 'unsafe-inline' *.googleapis.com;
+  frame-src * 'self' widget.zola.com;
   img-src * blob: data:;
   media-src 'none';
   connect-src *;

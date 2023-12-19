@@ -44,7 +44,9 @@ export const accommodationsMarkdown = `
 export const scheduleMarkdown = `
   **Saturday, April 20th, 2024**
 
-  - TBD on rehearsal and welcome party
+  - during the day - beach if you are in town
+  - 6-8pm - rehearsal party (Tommy Bahama Restaurant)
+  - 8-9pm - welcome drinks (Tommy Bahama Restaurant)
 
   **Sunday, April 21st, 2024**
 
@@ -55,7 +57,7 @@ export const scheduleMarkdown = `
 `;
 
 export const registryMarkdown = `
-  We will have our registry ready to go in a few months so check back!
+  [View our registry below](/#registry)
 `;
 
 export const thingsToDoMarkdown = `
@@ -73,4 +75,8 @@ export const thingsToDoMarkdown = `
   - Square Grouper 
   - Guanabanas 
   - Latitudes Restaurant at Jupiter Beach Resort & Spa Hotel
+`;
+
+export const rsvpMarkdown = `
+  [RSVP on our Zola site](https://www.zola.com/wedding/jenandwade/rsvp)
 `;

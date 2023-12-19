@@ -17,8 +17,9 @@ export const Section = styled.div`
   flex-flow: column nowrap;
   justify-content: center;
   gap: 2rem;
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
   overflow-x: hidden;
+  background-color: var(--colors-white);
 
   @media ${device.tablet} {
     padding: 4rem;

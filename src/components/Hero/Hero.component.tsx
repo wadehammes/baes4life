@@ -46,6 +46,7 @@ const StyledBorderCornerBottomRight = styled(StyledBorderCorner)`
 const StyledHeader = styled.header`
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-flow: column wrap;
   gap: 1rem;
   position: relative;
@@ -65,7 +66,7 @@ const StyledHero = styled.div`
   position: relative;
 
   @media screen and (max-height: 520px) {
-    min-height: 520px;
+    min-height: 580px;
   }
 
   > ${StyledHeader} {
@@ -81,6 +82,22 @@ const StyledPageArrow = styled.div`
 
   @media ${device.tablet} {
     bottom: 6rem;
+  }
+`;
+
+const StyledButtonLink = styled.a`
+  display: inline-block;
+  font-size: 1.25rem;
+  padding: 0.75em 2.25em 0.7em;
+  max-width: auto;
+  text-decoration: none;
+  border: 1px solid var(--colors-white);
+  color: var(--colors-white);
+  margin-top: 1.5rem;
+
+  &:hover {
+    color: var(--colors-black);
+    background: var(--colors-white);
   }
 `;
 
@@ -128,6 +145,7 @@ export const Hero = () => {
         <HeroSubText>
           April 20th-22nd, 2024 <br /> Jupiter, FL
         </HeroSubText>
+        <StyledButtonLink href="/rsvp">RSVP</StyledButtonLink>
       </StyledHeader>
       <StyledPageArrow onClick={handleOurStoryScroll}>
         <Countdown color="light" animate={true} />
