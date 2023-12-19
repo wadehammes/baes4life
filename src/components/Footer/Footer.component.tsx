@@ -1,4 +1,3 @@
-import { darken } from "polished";
 import { Countdown } from "src/components/Countdown/Countdown.component";
 import { Section } from "src/components/Layout";
 import { styled } from "styled-components";
@@ -9,16 +8,17 @@ const FooterSection = styled(Section)`
   justify-content: center;
   flex-flow: column nowrap;
   gap: 3rem;
-  background: ${darken(0.025, "#25523B")};
-  color: var(--colors-white);
+  background: var(--colors-white);
+  color: var(--colors-black);
   text-align: center;
+  padding: 1rem 2rem 6rem;
 `;
 
 export const Footer = () => {
   return (
     <FooterSection>
       <p>Jen & Wade say "I do" April 21st, 2024</p>
-      <Countdown color="light" animate={false} />
+      <Countdown color="dark" animate={false} />
     </FooterSection>
   );
 };

@@ -4,7 +4,7 @@ export const CSSRootVariables = createGlobalStyle`
   :root {
     --colors-gray: #7E888C;
     --colors-black: #393d3f;
-    --colors-white: #fdfdff;
+    --colors-white: #fff;
     --colors-silver: #c6c5b9;
     --colors-forest: #25523B;
     --colors-gold: #B8870F;
