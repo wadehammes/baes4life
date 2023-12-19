@@ -58,7 +58,7 @@ const ImageGallery = styled.div`
   }
 `;
 
-const imageMap = Array.from({ length: 23 }).map((_, index) => ({
+const imageMap = Array.from({ length: 22 }).map((_, index) => ({
   id: index,
   file: `/gallery/${index}.jpg`,
 }));
