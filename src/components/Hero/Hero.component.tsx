@@ -1,10 +1,15 @@
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import { Countdown } from "src/components/Countdown/Countdown.component";
 import { Navigation } from "src/components/Navigation/Navigation.component";
 import { H1, HeroSubText } from "src/components/Typography";
 import { device } from "src/styles/theme";
 import { styled } from "styled-components";
 import { useWindowSize } from "usehooks-ts";
+
+const getRandomNumber = () => {
+  return Math.floor(Math.random() * 9) + 1;
+};
 
 const StyledBorderCorner = styled.div`
   position: absolute;
@@ -103,6 +108,11 @@ const StyledButtonLink = styled.a`
 
 export const Hero = () => {
   const { width, height } = useWindowSize();
+  const [imageNumber, setImageNumber] = useState<number | null>(null);
+
+  useEffect(() => {
+    setImageNumber(getRandomNumber());
+  }, []);
 
   const handleOurStoryScroll = () => {
     document
@@ -122,24 +132,27 @@ export const Hero = () => {
       <StyledBorderCornerBottomLeft />
       <StyledBorderCornerBottomRight />
       <Navigation />
-      <Image
-        src="/images/hero.jpg"
-        height={height}
-        width="2560"
-        alt=""
-        role="presentation"
-        priority
-        quality={100}
-        style={{
-          objectFit: "cover",
-          position: "absolute",
-          zIndex: 0,
-          top: 0,
-          opacity: 0.45,
-          width: "100%",
-          height: "100%",
-        }}
-      />
+      {imageNumber ? (
+        <Image
+          src={`/hero/${imageNumber}.jpg`}
+          height={height}
+          width="2560"
+          alt=""
+          role="presentation"
+          priority
+          quality={100}
+          style={{
+            objectFit: "cover",
+            position: "absolute",
+            zIndex: 0,
+            top: 0,
+            opacity: 0.5,
+            width: "100%",
+            height: "100%",
+            filter: "grayscale(1)",
+          }}
+        />
+      ) : null}
       <StyledHeader>
         <H1>Jen & Wade</H1>
         <HeroSubText>
