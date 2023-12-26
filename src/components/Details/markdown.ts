@@ -1,7 +1,7 @@
 export const attireMarkdown = `
   The theme of our wedding is **Tropical Island Disco**, so think tropical island chic.
 
-  **Fellas**: a nice Hawaiian shirt, linen pants, and huarache sandals. Or, a cream/tan/white linen suit. Absolutely no business casual. Leave the khakis, dress shoes, and blue suits at home. Tropical colors and patterns are encouraged and highly recommended.
+  **Fellas**: a nice Hawaiian shirt, linen pants, and huarache-style sandals (dressy sneakers are also fine, but no tennis shoes). Or, a linen suit if you prefer to be more dressed up. Think something you would wear on an island vacation or going out in Miami. Please no business casual. Leave the khakis, dress shoes, and blue suits at home. Tropical colors and patterns are encouraged and highly recommended.
 
   **Ladies**: think summer or cocktail dresses, not anything you would wear to a BBQ. If you choose to wear a beachy dress, consider a tea length or maxi to avoid being too casual. Leave the business casual vibes back at home, tropical colors and patterns are encouraged and highly recommended.
 
