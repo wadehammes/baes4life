@@ -46,7 +46,7 @@ export const scheduleMarkdown = `
 
   - during the day - beach if you are in town
   - 6-8pm - rehearsal party (by invite only at Tommy Bahama Restaurant)
-  - 8-9pm - join us after our rehearsal party for welcome drinks (Tommy Bahama Restaurant)
+  - 8:30pm - welcome drinks (Square Grouper, 21+)
 
   **Sunday, April 21st, 2024**
 
