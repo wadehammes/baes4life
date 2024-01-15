@@ -45,11 +45,12 @@ export const scheduleMarkdown = `
   **Saturday, April 20th, 2024**
 
   - during the day - beach if you are in town
-  - 6-8pm - rehearsal party (Tommy Bahama Restaurant)
-  - 8-9pm - welcome drinks (Tommy Bahama Restaurant)
+  - 6-8pm - rehearsal party (by invite only at Tommy Bahama Restaurant)
+  - 8-9pm - join us after our rehearsal party for welcome drinks (Tommy Bahama Restaurant)
 
   **Sunday, April 21st, 2024**
 
+  - during the day - beach/relax
   - 5:30pm - wedding ceremony
   - 6-7pm - cocktail hour
   - 7-10pm - dinner/dancing
